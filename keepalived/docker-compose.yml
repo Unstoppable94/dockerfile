@@ -1,0 +1,18 @@
+version: '2'
+services:
+  keepalived:
+    image: winhong/keepalived 
+    restart: always
+    network_mode: host
+    privileged: true
+    volumes:
+      - /root/compose/keepalived_e.conf:/etc/keepalived/keepalived_e.conf
+      - /root/compose/keepalived.sh:/usr/bin/keepalived.sh
+    environment:
+      - INTERFACE=${INTERFACE}
+      - STATE=${STATE}
+      - VIRTUAL_ROUTER_ID=${VIRTUAL_ROUTER_ID}
+      - PRIORITY=${PRIORITY}
+      - VIRTUAL_IP=${VIRTUAL_IP}
+      - NETMASK_BIT=${NETMASK_BIT}
+      - CHECK_SCRIPT=${CHECK_SCRIPT}
