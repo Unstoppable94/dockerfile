@@ -1,0 +1,13 @@
+{
+    "registry-mirrors": ["http://10.0.2.50"],
+    "insecure-registries": ["10.0.2.50","10.211.55.52","10.211.55.55"],
+    "log-driver": "json-file",
+    "log-opts": {
+      "labels" : "tag,app",
+      "env" : "os,image",
+      "max-file" : "2",
+      "max-size": "10m" 
+        },
+    "hosts":["tcp://0.0.0.0:2375"]    
+}
+
