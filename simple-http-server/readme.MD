@@ -4,14 +4,14 @@ Docker image that runs the node application [http-server](https://www.npmjs.com/
 
 Pull commond:
 ```
-docker pull 10.0.2.50/wh-cicd/docker-http-server
+docker pull unstoppable/http-server
 ```
 How to run it:
 
 ```
-docker run --rm -ti -p 8080:8080 --name http-server -v DIRECTORY_TO_EXPOSE:/public wh-cicd/docker-http-server
+docker run --rm -ti -p 8080:8080 --name http-server -v DIRECTORY_TO_EXPOSE:/public unstoppable/http-server
 ```
 
 Build command 
-docker build -t 10.0.2.50/wh-cicd/docker-http-server .
-docker push 10.0.2.50/wh-cicd/docker-http-server
+docker build -t unstoppable/http-server .
+docker push unstoppable/http-server
